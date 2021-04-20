@@ -1,5 +1,6 @@
 import 'package:devquiz/application/coordinator/routes.dart';
 import 'package:devquiz/application/providers/providers.dart';
+import 'package:devquiz/application/screens/home/home.screen.dart';
 import 'package:devquiz/application/screens/splash/splash.screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'DevQuiz',
 //        theme: theme(),
-        initialRoute: SplashScreen.routeName,
+        initialRoute: HomeScreen.routeName,
         routes: routes,
       ),
     );
