@@ -84,4 +84,12 @@ class AppTextStyles {
     fontSize: 11,
     fontWeight: FontWeight.normal,
   );
+
+  static TextStyle levelButtonText(Color color) {
+    return GoogleFonts.notoSans(
+      color: color,
+      fontSize: 13,
+      fontWeight: FontWeight.bold,
+    );
+  }
 }
