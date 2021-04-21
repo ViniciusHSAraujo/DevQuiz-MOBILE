@@ -1,4 +1,5 @@
 import 'package:devquiz/application/constants/app_colors.dart';
+import 'package:devquiz/application/constants/app_types.dart';
 import 'package:flutter/material.dart';
 
 class LevelButtonStyle {
@@ -13,20 +14,21 @@ class LevelButtonStyle {
   });
 }
 
-final Map<String, LevelButtonStyle> levelButtonStyles = {
-  "Fácil": LevelButtonStyle(
+
+final Map<LevelButtonType, LevelButtonStyle> levelButtonStyles = {
+  LevelButtonType.facil: LevelButtonStyle(
       backgroundColor: AppColors.levelButtonFacil,
       borderColor: AppColors.levelButtonBorderFacil,
       textColor: AppColors.levelButtonTextFacil),
-  "Médio": LevelButtonStyle(
+  LevelButtonType.medio: LevelButtonStyle(
       backgroundColor: AppColors.levelButtonMedio,
       borderColor: AppColors.levelButtonBorderMedio,
       textColor: AppColors.levelButtonTextMedio),
-  "Difícil": LevelButtonStyle(
+  LevelButtonType.dificil: LevelButtonStyle(
       backgroundColor: AppColors.levelButtonDificil,
       borderColor: AppColors.levelButtonBorderDificil,
       textColor: AppColors.levelButtonTextDificil),
-  "Perito": LevelButtonStyle(
+  LevelButtonType.perito: LevelButtonStyle(
       backgroundColor: AppColors.levelButtonPerito,
       borderColor: AppColors.levelButtonBorderPerito,
       textColor: AppColors.levelButtonTextPerito),

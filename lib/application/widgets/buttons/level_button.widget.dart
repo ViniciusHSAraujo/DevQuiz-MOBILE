@@ -1,6 +1,8 @@
 import 'package:devquiz/application/constants/app_colors.dart';
+import 'package:devquiz/application/constants/app_types.dart';
 import 'package:devquiz/application/theme/app_buttons_styles.dart';
 import 'package:devquiz/application/theme/app_text_styles.dart';
+import 'package:devquiz/application/utils/TypeConverter.dart';
 import 'package:flutter/cupertino.dart';
 
 class LevelButtonWidget extends StatelessWidget {
@@ -12,7 +14,7 @@ class LevelButtonWidget extends StatelessWidget {
   })   : assert(["Fácil", "Médio", "Difícil", "Perito"].contains(label)),
         super(key: key);
 
-  LevelButtonStyle get buttonStyle => levelButtonStyles[label]!;
+  LevelButtonStyle get buttonStyle => levelButtonStyles[TypeConverter.StringtoLevelButton(label)]!;
 
   @override
   Widget build(BuildContext context) {
