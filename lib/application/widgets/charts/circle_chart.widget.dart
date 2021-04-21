@@ -1,0 +1,32 @@
+import 'package:devquiz/application/constants/app_colors.dart';
+import 'package:devquiz/application/theme/app_text_styles.dart';
+import 'package:flutter/material.dart';
+
+class CircleChartWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 80,
+      height: 80,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: 80,
+            height: 80,
+            child: CircularProgressIndicator(
+              strokeWidth: 10,
+              value: 0.75,
+              backgroundColor: AppColors.chartSecondary,
+              valueColor: AlwaysStoppedAnimation<Color>(AppColors.chartPrimary),
+            ),
+          ),
+          Text(
+            "75%",
+            style: AppTextStyles.heading,
+          )
+        ],
+      ),
+    );
+  }
+}
