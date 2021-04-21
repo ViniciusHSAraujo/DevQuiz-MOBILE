@@ -1,3 +1,4 @@
+import 'package:devquiz/application/constants/app_types.dart';
 import 'package:devquiz/application/widgets/ScaffoldItems/app_bar.widget.dart';
 import 'package:devquiz/application/widgets/buttons/level_button.widget.dart';
 import 'package:devquiz/application/widgets/cards/quiz_card.widget.dart';
@@ -28,19 +29,19 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                LevelButtonWidget(label: "Fácil"),
+                LevelButtonWidget(levelButtonType: LevelButtonType.facil,),
                 SizedBox(
                   width: 5,
                 ),
-                LevelButtonWidget(label: "Médio"),
+                LevelButtonWidget(levelButtonType: LevelButtonType.medio),
                 SizedBox(
                   width: 5,
                 ),
-                LevelButtonWidget(label: "Difícil"),
+                LevelButtonWidget(levelButtonType: LevelButtonType.dificil),
                 SizedBox(
                   width: 5,
                 ),
-                LevelButtonWidget(label: "Perito")
+                LevelButtonWidget(levelButtonType: LevelButtonType.perito)
               ],
             ),
           ),
